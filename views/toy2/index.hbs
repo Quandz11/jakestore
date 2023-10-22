@@ -1,0 +1,58 @@
+<section id="slide">
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a4f0d2c3-dee8-468e-be66-7468c05b4b37/dfj31at-93bb7e14-43a0-465e-aa1c-f4975db28ee8.jpg/v1/fill/w_1500,h_500,q_75,strp/goku_banner_by_zettasloe_dfj31at-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTAwIiwicGF0aCI6IlwvZlwvYTRmMGQyYzMtZGVlOC00NjhlLWJlNjYtNzQ2OGMwNWI0YjM3XC9kZmozMWF0LTkzYmI3ZTE0LTQzYTAtNDY1ZS1hYTFjLWY0OTc1ZGIyOGVlOC5qcGciLCJ3aWR0aCI6Ijw9MTUwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.RxPUU_nKhLXmmRJ6_mokOUIoTdrJBjSMHzlP_t1vS_A" alt="Los Angeles" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f938e5e7-be0e-4aad-a3d2-038c0c6eb150/dfgl5z5-61cd2321-a27d-4691-9f45-a7a9f936e76b.jpg/v1/fill/w_1280,h_427,q_75,strp/goku_banner_by_therandomshan_dfgl5z5-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDI3IiwicGF0aCI6IlwvZlwvZjkzOGU1ZTctYmUwZS00YWFkLWEzZDItMDM4YzBjNmViMTUwXC9kZmdsNXo1LTYxY2QyMzIxLWEyN2QtNDY5MS05ZjQ1LWE3YTlmOTM2ZTc2Yi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.bN4zhERfwijTVFPWUpg2ZHX0jGhN_2oTyFY9LPQUTtg" alt="Chicago" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="https://pbs.twimg.com/media/FQabObhXoAcP5NH.jpg:large" alt="New York" class="d-block" style="width:100%">
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+</section>
+
+<section id="menu" class="menu">
+
+   <h1 class="heading">Gundam</h1>
+
+   <div class="box-container">
+    {{#each toy2 }}
+      <div class="box">
+         <div class="price">{{price}}</div>
+         <a href="/toy2/detail/{{ _id }}"><img src="{{image}}" height="400px" alt=""> </a>  
+         <div class="name"> {{ name }} </div>
+         <form action="#" method="post">
+            <input type="hidden" name="pid" >
+            <input type="hidden" name="name" >
+            <input type="hidden" name="price" >
+            <input type="hidden" name="images" >
+            <input type="number" name="qty" class="qty" min="1" max="99" value="1">
+            <input type="submit" class="btn" name="add_to_cart" value="add to cart">
+         </form>
+      </div>
+      {{/each}}
+   </div>
+
+</section>
+

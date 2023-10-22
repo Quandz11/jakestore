@@ -1,0 +1,37 @@
+<section class="home">
+    <div class="text">Home</div>
+        <ol style="margin-left: 3rem" class="list-group list-group-numbered">
+<form action="/toy2/edit/{{ toy2._id }}" method="post">
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder=" Name" value="{{toy2.name}}">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Material</label>
+        <input type="text" class="form-control" id="material" name="material" placeholder="Material" value="{{toy2.material}}">
+    </div>
+     <div class="mb-3">
+        <label for="description" class="form-label">Size</label>
+        <input type="number" class="form-control" id="size" name="size" placeholder="Size" value="{{toy2.size}}">
+    </div>
+     <div class="mb-3">
+        <label for="description" class="form-label">Brand</label>
+        <input type="text" class="form-control" id="brand" name="brand" placeholder="Brand" value="{{toy2.brand}}">
+    </div>
+    <div class="mb-3">
+        <label for="year" class="form-label"> Color</label>
+        <input type="text" class="form-control" id="color" name="color" placeholder="Color" value="{{toy2.color}}">
+    </div>
+     <div class="mb-3">
+        <label for="description" class="form-label">Price</label>
+        <input type="number" class="form-control" id="price" name="price" placeholder="Price" value="{{toy2.price}}">
+    </div>
+     <div class="mb-3">
+        <label for="description" class="form-label">Image</label>
+        <input type="text" class="form-control" id="image" name="image" placeholder="Images" value="{{toy2.image}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</ol>
+</section>
