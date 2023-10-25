@@ -28,7 +28,7 @@ router.get('/', function(req, res, next) {
   router.post('/register', async (req, res) => {
     var register = req.body;
     await AuthenModel.create(register);
-    res.redirect('/authen');t
+    res.redirect('/authen');
  })
 
 
